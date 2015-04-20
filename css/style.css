@@ -55,6 +55,7 @@ h2, h3, h4, h5 {
   color: #999999;
   line-height: 16px;
   float: left;
+  margin-right: 10px;
 }
 
 .location-text {
@@ -83,12 +84,13 @@ a {
   font-style: italic;
   font-size: 18px;
   color: #F3F3F3;
-  line-height: 28px;
+  line-height: 50px;
 }
 
 #skillsH3 {
   color: #F5AE23;
   display: none;
+  float: none;
 }
 
 .orange {
@@ -119,6 +121,19 @@ a {
   background-color: #484848;
 }
 
+#topContacts{
+  float: none;
+  justify-content: initial;
+  margin-bottom: 5px;
+}
+
+#footerContacts{
+  background-color: rgb(72, 72, 72);
+  width: 100%;
+  justify-content: space-around;
+  padding: 10px;
+}
+
 .flex-box {
   display: -webkit-flex;
   display: flex;
@@ -126,6 +141,7 @@ a {
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 10px;
+  float: left;
 }
 
 .center-content {
@@ -146,9 +162,6 @@ ul {
   display: none;
 }
 
-img {
-  padding: 10px;
-}
 
 /* Bar chart stuff */
 .chart div {
@@ -212,4 +225,110 @@ span {
   .biopic {
     display: block;
   }
+}
+
+
+button {
+  position: absolute;
+  left: 70px;
+  top: 5px;
+  padding: 2px 3px 2px 3px;
+  box-shadow: -1px 1px 3px rgb(245, 166, 35);
+  background-color: gray;
+  border: 1px solid gray;
+  cursor: pointer;
+}
+
+/*
+*  Image Grid- grided
+*/
+
+hr {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #fff;
+  margin: 15px 0;
+  clear: both;
+}
+.centered {
+  text-align: center;
+}
+.img-wrapper {
+  width: 100%;
+  padding: 0px 0;
+}
+.img-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* ----- Image grids ----- */
+ul.grided {
+  list-style: none;
+  font-size: 0px;
+  margin-left: -2.5%; /* should match li left margin */
+}
+ul.grided li {
+  display: inline-block;
+  padding: 1px 10px 1px 5px;
+  margin: 0 0 2.5% 2.5%;
+  background: #4D4D4D;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  font-size: 1rem;
+  vertical-align: top;
+  box-shadow: 0 0 5px #ddd;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+ul.grided li img {
+  max-width: 100%;
+  height: auto;
+  margin: 10px 2px 10px 2px;
+}
+
+/* class for 3 columns */
+ul.grided.columns-3 li {
+  width: 30.5%; /* this value + 2.5 should = 33% */
+}
+/* class for 4 columns */
+ul.grided.columns-4 li {
+  width: 22.5%; /* this value + 2.5 should = 25% */
+}
+
+@media (max-width: 1199px) {
+  .img-container {
+    width: auto;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  ul.grided {
+    margin-left: 0;
+  }
+  ul.grided li {
+    width: 100% !important; /* over-ride all li styles */
+    margin: 0 0 20px;
+  }
+}
+
+/* Infobox */
+.infobox-wrapper {
+    display:none;
+}
+#infobox {
+    border:2px solid black;
+    margin-top: 8px;
+    background:#333;
+    color:#FFF;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:12px;
+    padding: .5em 1em;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    text-shadow:0 -1px #000000;
+    -webkit-box-shadow: 0 0  8px #000;
+    box-shadow: 0 0 8px #000;
 }
